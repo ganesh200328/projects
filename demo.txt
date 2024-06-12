@@ -1,3 +1,0 @@
-this is demo file to pull
-now it is modified in remote repository
-
