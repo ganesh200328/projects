@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FeedZie</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment"></string>
+    <string name="about">HOW TO USE?</string>
+    <string name="aboutus">BeatHunger aims on eliminating hunger issue of India. We believe strongly in our motto that every individual, irrespective of their caste and age, must not sleep with an empty stomach. FeedZie has partnered with restaurants, organizations and individuals like you who will help us in feeding hygenic food to the ones in need.\n\n<b>INSTRUCTIONS</b>\n\n<b>Step 1:</b> If your are a donor, add your details under the donor section\n\n<b>Step 2:</b> The donor can select the number of plates. By number of plates, the donor means that he is donating a food item like rice, wheat or such cereals, pulses, fruits or meat covering one full plate.\n\n<b>Step 3:</b> If you are some group/organization that is interested in distributing foods, hop onto the receiver section and request for donation through phone calls</string>
+
+</resources>
