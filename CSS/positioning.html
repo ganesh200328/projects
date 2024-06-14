@@ -1,0 +1,127 @@
+<style>
+    div{
+        background-color: yellowgreen;
+        display: flex;
+        width: 600;
+        padding: 40px;
+        flex-wrap: wrap;
+        text-align: center;
+        cursor: pointer;
+        margin: auto;
+        
+        position: relative;
+        border: 3;
+        border-style: solid;
+        border-color: black;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        
+    }
+    div:hover{
+        transform: skew(30deg);
+        background-color: brown;
+        
+    }
+    h1{
+        background-color: black;
+        color: aqua;
+        margin: 20;
+        height: fit-content;
+        
+    }
+    
+    
+    
+    @media only screen and (min-width:500px){
+        .four{
+            background-color: cadetblue;
+        }
+    }
+    @media only screen and (min-width:700px){
+        .five{
+            background-color: yellow;
+        }
+    }
+    @media only screen and (min-width:800px){
+        .six{
+            background-color: brown;
+        }
+    }
+    .box{
+        box-shadow: 5px 5px cyan;
+        cursor: pointer;
+        width: fit-content;
+        border: 3px solid black;
+    }
+    .box:hover{
+        background-color: black;
+        color: aqua;
+        margin: 20;
+        width: fit-content;
+    }
+    .text{
+        text-shadow:5px 5px 5px cyan ;
+        text-decoration: none;
+    }
+    body{
+        background-color: bisque;
+    }
+    .one,.two{
+        text-shadow: 4px 4px 5px black;
+        box-shadow: 4px 0px 2px grey;
+        background-color: white;
+        border-radius: 50%;
+        border: 1px;
+        padding: 5;
+        
+        
+        cursor: pointer;
+        
+        
+    }
+    .one:hover{
+        transform: skew(30deg);
+        
+    }
+    .two:hover{
+        transform: rotate(40deg);
+    }
+    .three:hover{
+        transform: scale(1.1);
+    }
+    .four:hover{
+        transform: translate(9px);
+    }
+    img{
+        object-fit: contain;
+    }
+    .t:last-of-type span{
+        text-align: center;
+        margin-left: -360px;
+        animation: slidein 7s infinite;
+
+    }
+    @keyframes slidein{
+        0%{opacity: 0;}
+        20%{opacity: 1;}
+        80%{opacity: 1;}
+        100%{opacity: 0;}
+
+
+        
+    }
+</style>    
+<div>
+    <h1 class="one">one</h1>
+    <h1 class="two">two</h1>
+    <h1 class="three">three</h1>
+    <h1 class="four">four</h1>
+    <h1 class="five">five</h1>
+    <h1 class="six">six</h1>
+</div>
+
+<h2 class="box"><a href="https://www.google.com">Helloo</a></h2>
+<h2 class="text">Helloo</h2>
+
+<h3 class="t">Escape into Amazzingg Experience</h3>
