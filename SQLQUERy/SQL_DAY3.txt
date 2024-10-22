@@ -1,0 +1,50 @@
+use db1;
+insert into profile values(7,"gansh",19);
+desc profile;
+select * from profile;
+select * from profile where name like 'k%';
+select * from profile where name like '%t';
+select * from profile where name like 'G%h';
+select * from profile where name like '%N%';
+select * from profile where name like 'G\%';
+select * from profile order by name asc;
+select distinct name from profile;
+select * from profile where name like '_a%';
+select * from profile where name like '__n%';
+use dummy;
+select * from student;
+select * from student order by (case dept 
+when 'CSE' then 1
+when "MECH" then 2
+else 1--after 1 unmatched will print then 2 condition will work
+end);
+select *from student
+
+
+
+
+Sorting behavior:
+
+Rows with the number 1 (i.e., 'CSE' and other unmatched departments) will appear first in the result set.
+Rows with the number 2 (i.e., 'MECH') will appear after.
+
+Example:
+If your student table looks like this:
+| id | name   | dept  |
+|----|--------|-------|
+| 1  | Alice  | CSE   |
+| 2  | Bob    | MECH  |
+| 3  | Carol  | ECE   |
+| 4  | David  | CSE   |
+| 5  | Eve    | CIVIL |
+After the ORDER BY, the result will be:
+
+| id | name   | dept  |
+|----|--------|-------|
+| 1  | Alice  | CSE   |
+| 4  | David  | CSE   |
+| 3  | Carol  | ECE   |  -- treated as CSE because of the ELSE clause
+| 5  | Eve    | CIVIL |  -- treated as CSE because of the ELSE clause
+| 2  | Bob    | MECH  |
+'CSE' and other departments come first because of 1.
+'MECH' comes second because of 2.

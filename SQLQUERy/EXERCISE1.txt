@@ -1,0 +1,37 @@
+create table customer(
+customer_id int,
+customer_name varchar(100),
+customer_address varchar(100),
+city varchar(100),
+state varchar(100),
+zip_code long
+);
+alter table customer change zip_code zip_code varchar(100);
+insert into customer values(1,"john Doe","392 sunset blvd","newyork","NT",1234);
+insert into customer values(2,"Mary Smith","6900 main st.","san fransico","CA",5678);
+insert into customer values(3,"Richar newman","2040 riverside road.","san diego","CA",9012);
+insert into customer values(4,"cathy cook","4010 speedway","tucson","Az",3456);
+select * from customer;
+alter table customer change customer_address address varchar(100);
+alter table customer add column mobile_number long;
+select * from customer;
+delete from customer where mobile_number is null;
+select * from customer;
+insert into customer values(1,"Arun","USA","washington","A","123",123456789);
+insert into customer values(2,"ArunKumar","US","canada","AK","1234",67890123);
+insert into customer values(3,"Elango","chengam","san fransico","EM","5678",456789012);
+insert into customer values(4,"Ganesh Kumar","USA","NewYork","GK","280102",1128152812);
+select customer_name from customer;
+select mobile_number from customer;
+update customer set mobile_number=744148768 where customer_name="Arun";
+Select * from Customer;
+delete from customer where zip_code="5678";
+select * from customer;
+select * from customer where address="USA";
+select * from customer where customer_id>=2;
+select * from customer order by mobile_number;
+select customer_name,address from customer;
+alter table customer drop column state;
+select * from customer;
+truncate customer;
+select * from customer;

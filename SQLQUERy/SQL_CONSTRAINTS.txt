@@ -1,0 +1,64 @@
+create schema college;
+use college;
+create table students(student_id int PRIMARY KEY Auto_Increment,
+Student_name varchar(20),
+Adhar_NO int Unique,
+Age int Not NUll,
+DOB date,
+Course varchar(30) default 'Unassigned'
+);
+
+
+desc students;
+
+select * from students;
+
+
+
+insert into students(Student_name,Adhar_NO,Age,DOB,Course) values("ARUN",0001,21,"2002-11-17","JAVA");
+insert into students(Student_name,Adhar_NO,Age,DOB,Course) 
+values("ARUN",0001,21,"2002-11-17","JAVA"),
+("ARUNKUMAR",0002,21,"2003-05-25","JAVA"),
+("ELANGO",0003,21,"2003-06-17","PYTHON"),
+("GANESHKUMAR",0004,21,"2003-01-28","JAVA"),
+("KANNAN",0005,22,"2002-07-19","PYTHON"),
+("MOHAN",0006,21,"2003-09-25","PYTHON"),
+("MUTHUKRISHNAN",0007,21,"2002-11-19","C#"),
+("LOGANATHAN",0008,21,"2003-11-19","C#"),
+("RAVINKUMAR",0009,22,"2002-09-10","C"),
+("RAJ",0010,21,"2003-08-15","C");
+
+
+
+select * from students;
+
+
+select Student_id,Student_name,round(datediff(curdate(),DOB)/365) as AGE,Age from students;
+
+
+
+select Student_id,Student_name,round(datediff(curdate(),DOB)/365) as AGE from students where age=round(datediff(curdate(),DOB)/365);
+
+select Avg(AGE) from students; 
+
+select count(Student_id) as Count from students;
+
+select * from students where Student_name like '%n%'; 
+
+select * from students where Student_name like '%R';
+
+select * from students where Student_name like 'G%';  
+
+select * from students where Student_name like '__n%';
+ 
+select * from students order by Student_name asc;
+
+select * from students order by DOB ;
+
+select distinct Course from students;
+
+select count(*),Course from students group by Course;
+
+
+
+drop table students

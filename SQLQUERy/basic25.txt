@@ -1,0 +1,38 @@
+create schema basic;
+use basic;
+create table basic(
+id int,name varchar(100),age int);
+alter table basic rename to student;
+select * from student;
+alter table student add column grade varchar(100);
+alter table student change column grade finalgrade varchar(100);
+insert into student(id,name,age,finalgrade) values
+(101,"arun",22,"A"),(102,"beast",20,"B"),(103,"Elango",20,"A"),(104,"Ganesh",21,"B"),(105,"Kanna",22,"C"),(106,"Mohan",19,"A"),(107,"MUTTu",19,"C"),
+(108,"Ravin",23,"O"),(109,"Kumar",19,"O");
+select * from student;
+update student set age=21 where id=101;
+delete from student where age=101;
+select count(*) from student;
+select * from student where age>19;
+insert into student values(111,"Ganesh",15,"B"),(112,"Kumar",16,"B");
+select name from student where name="kumar" or name="ganesh";
+select * from student where name in("ganesh","Kumar");
+select * from student where finalgrade in("A","B") And age>=20;
+select * from student where age>=18 and age<=25;
+select * from student where age between 18 and 20;
+Select * from student where age<18;
+select * from student where finalgrade>"B";
+Select count(*) from student;
+select avg(age) from student;
+select sum(age) from student where finalgrade in("A","B");
+select count(id),finalgrade from student group by finalgrade order by count(id) desc;
+select avg(age),age from student group by age;
+select avg(age),finalgrade from student group by finalgrade;
+select count(id),finalgrade from student group by finalgrade order by count(id) desc limit 1;
+select avg(age),finalgrade from student group by finalgrade having avg(age)<20;
+select count(*),finalgrade from student group by finalgrade having count(*)<3;
+select avg(age),finalgrade from student group by finalgrade having avg(age) between 18 and 20;
+select * from student order by age asc;
+select * from student where finalgrade in("A","B") order by age desc; 
+select * from student order by finalgrade asc;
+drop table student
